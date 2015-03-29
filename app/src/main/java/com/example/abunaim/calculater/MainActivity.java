@@ -17,6 +17,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     float finalresult = 0;
     String operator = "";
     int addtomemory=0;
+    int size=0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,55 +99,100 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     public void onClick(View v) {
 
         // TODO Auto-generated method stub
+        Toast t = Toast.makeText(getApplicationContext(),"the max length is 15 ",Toast.LENGTH_SHORT);
+
         switch (v.getId()) {
             case R.id.button0:
+                if(input.getText().toString().length()>=15){
+                    t.show();
+
+                }else{
+
                 input.setText(input.getText().toString() + "0");
-                result1 += "0";
+                result1 += "0";}
                 break;
 
             case R.id.button1:
-                input.setText(input.getText().toString() + "1");
-                result1 += "1";
+                if(input.getText().toString().length()>=15){
+                    t.show();
+                }
+                else{
+
+                    input.setText(input.getText().toString() + "1");
+                result1 += "1";}
                 break;
 
             case R.id.button2:
+                if(input.getText().toString().length()>=15){
+                    t.show();
+
+                }
+                else{
                 input.setText(input.getText().toString() + "2");
-                result1 += "2";
+                result1 += "2";}
                 break;
 
             case R.id.button3:
+                if(input.getText().toString().length()>=15){
+                    t.show();
+                }
+                else{
                 input.setText(input.getText().toString() + "3");
-                result1 += "3";
+                result1 += "3";}
                 break;
 
             case R.id.button4:
+                if(input.getText().toString().length()>=15){
+                    t.show();
+                }
+                else{
                 input.setText(input.getText().toString() + "4");
-                result1 += "4";
+                result1 += "4";}
                 break;
 
             case R.id.button5:
+                if(input.getText().toString().length()>=15){
+                    t.show();
+                }
+                else{
                 input.setText(input.getText().toString() + "5");
-                result1 += "5";
+                result1 += "5";}
                 break;
 
             case R.id.button6:
+                if(input.getText().toString().length()>=15){
+                    t.show();
+                }
+                else{
                 input.setText(input.getText().toString() + "6");
-                result1 += "6";
+                result1 += "6";}
                 break;
 
             case R.id.button7:
+                if(input.getText().toString().length()>=15){
+                    t.show();
+                }
+                else{
                 input.setText(input.getText().toString() + "7");
-                result1 += "7";
+                result1 += "7";}
                 break;
 
             case R.id.button8:
+                if(input.getText().toString().length()>=15){
+                    t.show();
+                }
+                else{
                 input.setText(input.getText().toString() + "8");
-                result1 += "8";
+                result1 += "8";}
                 break;
 
             case R.id.button9:
+                if(input.getText().toString().length()>=15){
+                    t.show();
+                }
+                else{
                 input.setText(input.getText().toString() + "9");
-                result1 += "9";
+                result1 += "9";}
                 break;
 
 	/*	case R.id.button2:
@@ -159,7 +206,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                     finalresult += Float.parseFloat(result2);
                 } else if (operator.equals("-")) {
                     finalresult -= Float.parseFloat(result2);
-                } else if (operator.equals("x")) {
+                } else if (operator.equals("*")) {
                     finalresult *= Float.parseFloat(result2);
                 } else if (operator.equals("/")) {
                     finalresult /= Float.parseFloat(result2);
@@ -171,7 +218,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 result1 = answer.getText().toString();
                 result2 = "";
                 operator = "=";//equal
-                answer.setText("result" + String.valueOf(finalresult));
+                input.setText("result" + String.valueOf(finalresult));
                 break;
 
             case R.id.buttonsum:   //addition
@@ -181,7 +228,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                     finalresult += Float.parseFloat(result2);
                 } else if (operator.equals("-")) {
                     finalresult -= Float.parseFloat(result2);
-                } else if (operator.equals("x")) {
+                } else if (operator.equals("*")) {
                     finalresult *= Float.parseFloat(result2);
                 } else if (operator.equals("/")) {
                     finalresult /= Float.parseFloat(result2);
@@ -193,7 +240,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 result1 = "";
                 result2 = "";
                 operator = "+";//addition
-                answer.setText(String.valueOf(finalresult));
+               // answer.setText(String.valueOf(finalresult));
                 break;
 
             case R.id.buttonsub: //substraction
@@ -215,7 +262,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 result1 = "";
                 result2 = "";
                 operator = "-";//substraction
-                answer.setText(String.valueOf(finalresult));
+              //  answer.setText(String.valueOf(finalresult));
                 break;
 
             case R.id.buttonmul://multiplication
@@ -236,8 +283,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 }
                 result1 = "";
                 result2 = "";
-                operator = "x";//multiplication
-                answer.setText(String.valueOf(finalresult));
+                operator = "*";//multiplication
+               // answer.setText(String.valueOf(finalresult));
                 break;
 
             case R.id.buttonsqr: //devision
@@ -247,7 +294,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                     finalresult += Float.parseFloat(result2);
                 } else if (operator.equals("-")) {
                     finalresult -= Float.parseFloat(result2);
-                } else if (operator.equals("x")) {
+                } else if (operator.equals("*")) {
                     finalresult *= Float.parseFloat(result2);
                 } else if (operator.equals("/")) {
                     finalresult /= Float.parseFloat(result2);
@@ -259,7 +306,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 result1 = "";
                 result2 = "";
                 operator = "/";//devision
-                answer.setText(String.valueOf(finalresult));
+              //  answer.setText(String.valueOf(finalresult));
                 break;
 
             case R.id.buttonc: //clear
